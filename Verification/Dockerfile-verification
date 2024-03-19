@@ -1,0 +1,11 @@
+FROM golang AS compiling_stage
+WORKDIR /go/src/APIGateway/Verification
+COPY . /go/src/APIGateway/Verification/
+RUN go mod init
+RUN go mod tidy
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o verification .
+
+FROM alpine:latest
+WORKDIR /root/
+COPY --from=compiling_stage /go/src/APIGateway/Verification .
+ENTRYPOINT ./verification

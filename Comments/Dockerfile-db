@@ -1,0 +1,6 @@
+FROM postgres
+WORKDIR /docker-entrypoint-initdb.d
+COPY storage/schema.sql .
+ENV POSTGRES_PASSWORD=postgres
+ENV POSTGRES_DB=comments
+EXPOSE 5432

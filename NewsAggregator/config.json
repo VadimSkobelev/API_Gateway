@@ -1,0 +1,8 @@
+{
+    "rss":[
+        "https://habr.com/ru/rss/news/?fl=ru",
+        "https://rssexport.rbc.ru/rbcnews/news/30/full.rss",
+        "https://rg.ru/xml/index.xml"
+    ],
+    "request_period": 5
+  }
