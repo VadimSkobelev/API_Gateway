@@ -24,7 +24,7 @@ http://localhost:8080		- API-gateway (точка входа для запрос�
 http://localhost:8081		- News
 http://localhost:8082		- Comments
 http://localhost:8083		- Verification
-5432                        - DB
+5432                            - DB
 ```
 
 ### Варианты обрабатываемых запросов:
